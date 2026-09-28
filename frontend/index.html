@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>National Land Acquisition & Management System (NLAMS) | Ministry of Rural Development | Government of India</title>
+  <meta name="description" content="Official Enterprise Portal for Web-based National Land Acquisition & Management System under RFCTLARR Act 2013, Ministry of Rural Development, Government of India.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- GIGW Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Top GIGW Bar -->
+  <header class="gov-top-bar" role="banner">
+    <div class="gov-top-left">
+      <span class="flag-symbol" aria-hidden="true">
+        <span class="saffron"></span>
+        <span class="white"></span>
+        <span class="green"></span>
+      </span>
+      <span data-en="GOVERNMENT OF INDIA" data-hi="भारत सरकार">GOVERNMENT OF INDIA</span>
+      <span style="opacity: 0.5;">|</span>
+      <span data-en="MINISTRY OF RURAL DEVELOPMENT" data-hi="ग्रामीण विकास मंत्रालय">MINISTRY OF RURAL DEVELOPMENT</span>
+    </div>
+    <div class="gov-top-right">
+      <div class="accessibility-controls" aria-label="Text Size and Contrast Controls">
+        <span style="font-size: 11px; margin-right: 4px;" data-en="Text Size:" data-hi="फ़ॉन्ट आकार:">Text Size:</span>
+        <button id="btn-font-decrease" class="acc-btn" title="Decrease font size" aria-label="Decrease font size">A-</button>
+        <button id="btn-font-reset" class="acc-btn" title="Reset font size" aria-label="Reset font size">A</button>
+        <button id="btn-font-increase" class="acc-btn" title="Increase font size" aria-label="Increase font size">A+</button>
+        <span style="opacity: 0.3; margin: 0 4px;">|</span>
+        <button id="btn-contrast-toggle" class="acc-btn" title="Toggle High Contrast" aria-label="High Contrast Mode">Contrast</button>
+      </div>
+      <div class="language-selector" aria-label="Language selection">
+        <button id="lang-en" class="lang-btn active">English</button>
+        <span style="opacity: 0.5;">|</span>
+        <button id="lang-hi" class="lang-btn">हिन्दी</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Official Ministry Header -->
+  <section class="official-header">
+    <div class="header-brand">
+      <!-- Official State Emblem of India (Ashoka Lion Capital - सत्यमेव जयते) -->
+      <div class="emblem-wrapper" title="State Emblem of India - सत्यमेव जयते">
+        <img src="images/emblem.png" alt="State Emblem of India - सत्यमेव जयते" class="emblem-img">
+      </div>
+
+      <div class="brand-text">
+        <div class="brand-text-hindi" data-en="ग्रामीण विकास मंत्रालय | भूमि संसाधन विभाग" data-hi="ग्रामीण विकास मंत्रालय | भूमि संसाधन विभाग">
+          ग्रामीण विकास मंत्रालय | भूमि संसाधन विभाग
+        </div>
+        <div class="brand-text-en">
+          National Land Acquisition & Management System
+        </div>
+        <div class="brand-subtext" data-en="Department of Land Resources • Government of India • RFCTLARR Act 2013" data-hi="भूमि संसाधन विभाग • भारत सरकार • भूमि अधिग्रहण अधिनियम 2013">
+          Department of Land Resources • Government of India • RFCTLARR Act 2013
+        </div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Simulate Role Selector (Prompt 1) -->
+      <div class="role-simulator" title="Switch User Role to test permission workflows">
+        <label for="role-simulator-select" class="role-label" data-en="Simulate Role:" data-hi="भूमिका अनुकरण:">Simulate Role:</label>
+        <select id="role-simulator-select" class="role-select" aria-label="Select User Role">
+          <option value="central" selected>🏛️ Central Ministry (MoRD / Line Ministry)</option>
+          <option value="state">🏢 State Govt (Revenue Dept, Maharashtra)</option>
+          <option value="district">⚖️ District Authority (CALA / Collector, Thane)</option>
+        </select>
+      </div>
+
+      <!-- User Profile Badge -->
+      <div class="user-profile-badge">
+        <div class="avatar-circle" title="User Authenticated">SK</div>
+        <div class="user-info-text">
+          <span class="user-name" id="user-profile-name">Dr. S. K. Sharma, IAS</span>
+          <span class="user-designation" id="user-profile-role">Joint Secretary (DoLR), MoRD</span>
+        </div>
+      </div>
+
+      <!-- Official IRCEP/Parichay SSO Login Button -->
+      <button id="btn-open-login-modal" class="header-login-btn" aria-label="Open Login Authentication">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        <span data-en="SSO Portal Login" data-hi="एसएसओ लॉगिन">SSO Portal Login</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Tricolor Accent Strip -->
+  <div class="tricolor-strip" aria-hidden="true">
+    <div class="tricolor-saffron"></div>
+    <div class="tricolor-white"></div>
+    <div class="tricolor-green"></div>
+  </div>
+
+  <!-- Gazette Ticker / Statutory Alert -->
+  <div class="gazette-ticker-bar" role="alert">
+    <span class="ticker-badge" data-en="Gazette Alert" data-hi="राजपत्र सूचना">Gazette Alert</span>
+    <span class="ticker-content" id="live-ticker-text">
+      Preliminary Notification under Section 11(1) of RFCTLARR Act 2013 issued for Thane-Palghar Industrial Corridor (P-409A to 414). Direct compensation claims portal live.
+    </span>
+    <span style="font-size: 11px; color: #A34930; font-weight: 700; white-space: nowrap;">
+      Scope: <span id="role-scope-badge">National Jurisdiction (All States)</span>
+    </span>
+  </div>
+
+  <!-- App Body Layout -->
+  <div class="app-container">
+
+    <!-- Left Navigation Sidebar (Bespoke Hand-Drawn Vector Art Icons) -->
+    <nav class="app-sidebar" aria-label="Primary Navigation">
+      <div>
+        <div class="sidebar-category-header" data-en="Main Portals" data-hi="मुख्य पोर्टल">Main Portals</div>
+        <ul class="sidebar-menu">
+          <li class="nav-item">
+            <a href="#dashboard" class="nav-link active" data-target="view-dashboard" id="nav-dashboard">
+              <!-- Hand-Drawn Artisan Survey Tablet Icon -->
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2h11A2.5 2.5 0 0 1 20 4.5v15A2.5 2.5 0 0 1 17.5 22h-11A2.5 2.5 0 0 1 4 19.5v-15z"/>
+                <path d="M8 7h8M8 11h5"/>
+                <path d="M8 15c2-1 4 1 6 0s2-1 2-1"/>
+                <circle cx="16" cy="11" r="1.5" fill="currentColor" fill-opacity="0.3"/>
+              </svg>
+              <span data-en="Dashboard" data-hi="डैशबोर्ड">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#proposals" class="nav-link" data-target="view-proposals" id="nav-proposals">
+              <!-- Hand-Drawn Tied Deed Scroll Icon -->
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3h10a2 2 0 0 1 2 2v13a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V5a2 2 0 0 1 3-2z"/>
+                <path d="M8 7h8M8 11h7M8 15h4"/>
+                <circle cx="16" cy="17" r="2.5" fill="currentColor" fill-opacity="0.3"/>
+                <path d="M16 19.5v2.5l1.5-1 1.5 1V19.5"/>
+              </svg>
+              <span data-en="Proposals" data-hi="प्रस्ताव">Proposals</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#gis" class="nav-link" data-target="view-gis" id="nav-gis">
+              <!-- Hand-Drawn Topographic Cadastral Map Icon -->
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6.5l6-2.5 6 2.5 6-2.5v13l-6 2.5-6-2.5-6 2.5z"/>
+                <path d="M9 4v13M15 6.5v13" stroke-dasharray="2 2"/>
+                <path d="M11 9c0-1.5 1-2.5 2-2.5s2 1 2 2.5c0 1.8-2 3.5-2 3.5s-2-1.7-2-3.5z" fill="currentColor" fill-opacity="0.3"/>
+                <circle cx="13" cy="9" r="0.8" fill="currentColor"/>
+              </svg>
+              <span data-en="GIS Map" data-hi="जीआईएस मानचित्र">GIS Map</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#records" class="nav-link" data-target="view-records" id="nav-records">
+              <!-- Hand-Drawn Ancestral Khasra Ledger Book Icon -->
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/>
+                <path d="M8 6h8M8 10h6M8 14h5"/>
+                <path d="M15 2v6l2-1.5 2 1.5V2" fill="currentColor" fill-opacity="0.3"/>
+              </svg>
+              <span data-en="Land Records" data-hi="भू-अभिलेख">Land Records</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#rr" class="nav-link" data-target="view-rr" id="nav-rr">
+              <!-- Hand-Drawn Family Homestead & Sheltering Tree Icon -->
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <path d="M9 20v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"/>
+                <path d="M12 7.5a1.5 1.5 0 0 1 1.5 1.5c0 1.2-1.5 2-1.5 2s-1.5-.8-1.5-2a1.5 1.5 0 0 1 1.5-1.5z" fill="currentColor" fill-opacity="0.3"/>
+              </svg>
+              <span data-en="R&R Tracking" data-hi="पुनर्वास ट्रैकिंग">R&R Tracking</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#reports" class="nav-link" data-target="view-reports" id="nav-reports">
+              <!-- Hand-Drawn Quill Pen & Gazette Charter Icon -->
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <path d="M8 13h8M8 17h5"/>
+                <path d="M18 13l-4 4-2-1 1-2 4-4a1.4 1.4 0 0 1 2 2z" fill="currentColor" fill-opacity="0.3"/>
+              </svg>
+              <span data-en="Reports" data-hi="रिपोर्ट्स एवं गजट">Reports</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="status-row">
+          <span class="status-indicator-dot"></span>
+          <span style="font-weight:700; color:#E2E8F0;">NLAMS Node Active</span>
+        </div>
+        <div>System Build: v4.2.8-Gov</div>
+        <div>NIC Delhi Data Center</div>
+      </div>
+    </nav>
+
+    <!-- Main Content Workspace -->
+    <main class="main-content" id="main-content" role="region">
+
+      <!-- Breadcrumbs and Timestamp -->
+      <div class="breadcrumb-container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+          <a href="#dashboard" data-en="Home" data-hi="होम">Home</a>
+          <span class="separator">/</span>
+          <span class="breadcrumb-current" id="breadcrumb-current-text" data-en="Dashboard" data-hi="डैशबोर्ड">Dashboard</span>
+        </nav>
+        <div class="page-timestamp">
+          <span data-en="System Time:" data-hi="सिस्टम समय:">System Time:</span>
+          <strong id="live-timestamp">28 Sep 2026, 20:15:00 IST</strong>
+        </div>
+      </div>
+
+      <!-- Page Main Header Title -->
+      <div class="page-title-row">
+        <div>
+          <h1 class="page-title" id="page-main-title" data-en="Executive Overview Dashboard" data-hi="कार्यकारी डैशबोर्ड">
+            Executive Overview Dashboard
+          </h1>
+          <p class="page-subtitle" data-en="Comprehensive tracking of Land Acquisition, Social Impact Assessment (SIA), and Direct Solatium Compensation under RFCTLARR Act 2013." data-hi="भूमि अधिग्रहण, सामाजिक प्रभाव आकलन (एसआईए), एवं मुआवज़ा वितरण की समग्र निगरानी।">
+            Comprehensive tracking of Land Acquisition, Social Impact Assessment (SIA), and Direct Solatium Compensation under RFCTLARR Act 2013.
+          </p>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           VIEW 1: Executive Dashboard (Prompt 2)
+           ==================================================================== -->
+      <section id="view-dashboard" class="view-panel active">
+        <!-- Top Row: 4 Metric Summary Cards with Hand-Drawn Vector Art & Watercolor Textures -->
+        <div class="metrics-grid">
+          <!-- Card 1: Total Area Notified -->
+          <div class="metric-card">
+            <!-- Watercolor & Hand-Drawn Cadastral Boundary Line-Art Watermark -->
+            <svg class="metric-card-watermark" viewBox="0 0 100 100" fill="none" stroke="#5E8368" stroke-width="1.5" aria-hidden="true">
+              <path d="M10 80 Q 30 40 50 60 T 90 20" stroke-width="2"/>
+              <path d="M20 90 L 40 50 L 70 70 L 95 35" stroke-dasharray="3 3"/>
+              <circle cx="50" cy="60" r="14" fill="#5E8368" fill-opacity="0.12"/>
+              <path d="M45 45 C 55 35 65 40 60 55 C 50 60 40 50 45 45 Z" fill="#DCE7DF"/>
+            </svg>
+            <div class="metric-card-header">
+              <span class="metric-title" data-en="Total Area Notified (Hectares)" data-hi="कुल अधिसूचित क्षेत्र (हेक्टेयर)">Total Area Notified (Hectares)</span>
+              <div class="metric-icon-box" title="Surveyed Agrarian Field Parcels">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 6l7-3 11 4-2 14-14 1-2-16z"/>
+                  <path d="M10 3v18M3 13l16-3" stroke-dasharray="2 2"/>
+                  <circle cx="10" cy="11" r="1.5" fill="#5E8368"/>
+                </svg>
+              </div>
+            </div>
+            <div class="metric-value">142,850 Ha</div>
+            <div class="metric-footer">
+              <span class="metric-badge badge-green">🌿 +12.4% Consensual YoY</span>
+              <span>42 Priority Corridors</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Total Area Acquired -->
+          <div class="metric-card">
+            <!-- Watercolor Sacred Banyan Tree Line-Art Watermark -->
+            <svg class="metric-card-watermark" viewBox="0 0 100 100" fill="none" stroke="#244633" stroke-width="1.5" aria-hidden="true">
+              <path d="M50 85 V 50 M40 85 C 45 70 48 60 50 50 C 52 60 55 70 60 85"/>
+              <circle cx="50" cy="35" r="26" fill="#244633" fill-opacity="0.08"/>
+              <path d="M30 40 C 25 25 45 15 50 25 C 55 15 75 25 70 40 C 75 55 55 60 50 50 C 45 60 25 55 30 40 Z" fill="#EDF5F0"/>
+            </svg>
+            <div class="metric-card-header">
+              <span class="metric-title" data-en="Total Area Acquired & Possessed" data-hi="कुल अधिग्रहित क्षेत्र">Total Area Acquired & Possessed</span>
+              <div class="metric-icon-box" title="Sacred Banyan Tree & Generational Stewardship">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22v-8"/>
+                  <path d="M7 22v-4a5 5 0 0 1 10 0v4"/>
+                  <path d="M12 14a6 6 0 1 0-6-6c0 .8.2 1.6.5 2.3A5 5 0 0 0 12 14z" fill="#DCE7DF" fill-opacity="0.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="metric-value">98,420 Ha</div>
+            <div class="metric-footer">
+              <span class="metric-badge badge-blue">🌳 68.9% Possession Handover</span>
+              <span>Gram Sabha Consent</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Compensation Disbursed (₹) -->
+          <div class="metric-card">
+            <!-- Watercolor Cupped Palms & Sprouting Grain Watermark -->
+            <svg class="metric-card-watermark" viewBox="0 0 100 100" fill="none" stroke="#C45F43" stroke-width="1.5" aria-hidden="true">
+              <circle cx="50" cy="50" r="34" fill="#C45F43" fill-opacity="0.08"/>
+              <path d="M25 65 C 35 75 65 75 75 65 C 70 50 60 55 50 48 C 40 55 30 50 25 65 Z" fill="#FCF4F1"/>
+              <path d="M50 25 V 48 M42 35 Q 50 25 58 35" stroke="#C45F43" stroke-width="2"/>
+            </svg>
+            <div class="metric-card-header">
+              <span class="metric-title" data-en="Direct Solatium Disbursed (₹)" data-hi="वितरित मुआवज़ा (₹)">Direct Solatium Disbursed (₹)</span>
+              <div class="metric-icon-box" title="Direct Benefit Transfer via Escrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 15c2 4 6 6 9 6s7-2 9-6"/>
+                  <path d="M12 4v7M9 7l3-3 3 3"/>
+                  <circle cx="12" cy="11" r="3" fill="#F8E3DD" fill-opacity="0.6"/>
+                </svg>
+              </div>
+            </div>
+            <div class="metric-value">₹ 28,450.80 Cr</div>
+            <div class="metric-footer">
+              <span class="metric-badge badge-saffron">🌾 100% PFMS Escrow DBT</span>
+              <span>Direct Bank Settlement</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Families Rehabilitated -->
+          <div class="metric-card">
+            <!-- Watercolor Village Cottage & Artisan Family Watermark -->
+            <svg class="metric-card-watermark" viewBox="0 0 100 100" fill="none" stroke="#DE7D63" stroke-width="1.5" aria-hidden="true">
+              <path d="M15 50 L 50 20 L 85 50 V 85 H 15 Z" fill="#F8E3DD" fill-opacity="0.3"/>
+              <path d="M40 85 V 60 H 60 V 85"/>
+              <circle cx="50" cy="40" r="6" fill="#C45F43" fill-opacity="0.3"/>
+            </svg>
+            <div class="metric-card-header">
+              <span class="metric-title" data-en="Families Rehabilitated (PAFs)" data-hi="पुनर्वासित परिवार">Families Rehabilitated (PAFs)</span>
+              <div class="metric-icon-box" title="Project Affected Families Resettlement">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>
+                  <path d="M9 21v-6a3 3 0 0 1 6 0v6"/>
+                  <path d="M12 8.5c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5c0 1.2-1.5 2-1.5 2s-1.5-.8-1.5-2z" fill="#C45F43" stroke="#C45F43"/>
+                </svg>
+              </div>
+            </div>
+            <div class="metric-value">41,290 PAFs</div>
+            <div class="metric-footer">
+              <span class="metric-badge badge-green">🏡 88.5% Homesteads Settled</span>
+              <span>2nd Schedule RFCTLARR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Row: Grid (Span 2 Left, Span 1 Right) -->
+        <div class="dashboard-grid-2-1">
+          <!-- Left Column (Span 2): State-wise Acquisition Progress Chart -->
+          <div class="gov-card">
+            <div class="gov-card-header">
+              <h2 class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+                <span data-en="State-wise Acquisition Progress & Consensual Settlement" data-hi="राज्यवार भूमि अधिग्रहण प्रगति">State-wise Acquisition Progress & Consensual Settlement</span>
+              </h2>
+              <div class="chart-header-legend">
+                <div class="legend-item">
+                  <span class="legend-color-box legend-acquired"></span>
+                  <span data-en="Acquired Land (Ha)" data-hi="अधिग्रहित भूमि (हे.)">Acquired Land (Ha)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color-box legend-pending"></span>
+                  <span data-en="Pending Clearance (Ha)" data-hi="लंबित अधिग्रहण (हे.)">Pending Clearance (Ha)</span>
+                </div>
+              </div>
+            </div>
+            <div class="gov-card-body">
+              <div class="chart-container">
+                <svg id="svg-state-chart" class="svg-bar-chart" viewBox="0 0 620 275"></svg>
+                <div id="chart-tooltip" class="chart-tooltip"></div>
+              </div>
+
+              <!-- Artisan Narrative Storytelling Callout Banner -->
+              <div style="margin-top:16px; padding:14px 18px; background:var(--canvas-ivory); border-radius:var(--radius-md); border:1px solid var(--border-deckle); display:flex; align-items:flex-start; gap:14px;">
+                <span style="font-size:24px; line-height:1; flex-shrink:0;">🌾</span>
+                <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.55;">
+                  <strong style="color:var(--brand-forest); font-family:var(--font-serif); font-size:13px;">Artisan Data Story:</strong>
+                  Across Maharashtra, Uttar Pradesh, Gujarat, and Odisha, over <strong>98,420 Hectares</strong> have reached possession through Gram Sabha participatory dialogue. Solatium rates (100% market value multiplier) are placed in escrow before physical possession, protecting family dignity and intergenerational land heritage.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (Span 1): Recent Activities Feed -->
+          <div class="gov-card">
+            <div class="gov-card-header">
+              <h2 class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span data-en="Recent Activities & Milestones" data-hi="हाल की गतिविधियां एवं मील के पत्थर">Recent Activities & Milestones</span>
+              </h2>
+            </div>
+            <div class="gov-card-body">
+              <ul class="activity-feed">
+                <!-- Milestone 1 -->
+                <li class="activity-item">
+                  <span class="activity-bullet bullet-green"></span>
+                  <div>
+                    <div class="activity-title" data-en="Award declared for NH-48 Vasai" data-hi="एनएच-48 के लिए अवार्ड घोषित">Award declared for NH-48 Vasai</div>
+                    <div class="activity-desc">
+                      Section 23 statutory award approved for Vadodara-Mumbai Expressway connector. ₹412 Cr compensation deposited directly into PFMS escrow.
+                    </div>
+                    <div class="activity-meta">
+                      <span class="activity-authority">CALA Thane Office</span>
+                      <span>•</span>
+                      <span>28 Sep 2026, 14:30 IST</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Milestone 2 -->
+                <li class="activity-item">
+                  <span class="activity-bullet bullet-saffron"></span>
+                  <div>
+                    <div class="activity-title" data-en="Consensus reached on DFC Phase-3" data-hi="महाराष्ट्र सरकार द्वारा प्रस्ताव प्रस्तुत">Consensus reached on DFC Phase-3</div>
+                    <div class="activity-desc">
+                      Fresh linear acquisition proposal (840 Ha) cleared by Gram Sabha in Palghar with provision for model rehabilitation colony.
+                    </div>
+                    <div class="activity-meta">
+                      <span class="activity-authority">State Revenue Dept</span>
+                      <span>•</span>
+                      <span>27 Sep 2026, 11:15 IST</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Milestone 3 -->
+                <li class="activity-item">
+                  <span class="activity-bullet"></span>
+                  <div>
+                    <div class="activity-title" data-en="Preliminary Notification Published" data-hi="प्रारंभिक अधिसूचना जारी">Preliminary Notification Published</div>
+                    <div class="activity-desc">
+                      Section 11(1) gazette notification published for Sambalpur-Rourkela Greenfield Economic Corridor in Odisha state.
+                    </div>
+                    <div class="activity-meta">
+                      <span class="activity-authority">MoRTH / Odisha</span>
+                      <span>•</span>
+                      <span>25 Sep 2026, 09:40 IST</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statutory Compliance Lifecycle Track: Artisan Narrative Journey -->
+        <div class="statutory-flow-card">
+          <div class="statutory-flow-title">
+            <span data-en="RFCTLARR Act 2013 Statutory Pipeline Monitor (Empathetic Process Steps)" data-hi="भूमि अधिग्रहण अधिनियम 2013 सांविधिक पाइपलाइन">
+              RFCTLARR Act 2013 Statutory Pipeline Monitor (Empathetic Process Steps)
+            </span>
+            <span style="font-size:12px; font-weight:600; color:var(--brand-forest); font-family:var(--font-sans);">
+              🌿 Citizen-Centric Safeguards Active
+            </span>
+          </div>
+          <div class="statutory-steps">
+            <!-- Stage 1 -->
+            <div class="statutory-step-box completed">
+              <div class="step-icon-badge" title="Gram Sabha Assembly">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="step-sec">STAGE 1: SEC 4</div>
+              <div class="step-name">Social Impact Assessment</div>
+              <div class="step-note">Gram Sabha Consultation</div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="statutory-step-box completed">
+              <div class="step-icon-badge" title="Official Gazette">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div class="step-sec">STAGE 2: SEC 11</div>
+              <div class="step-name">Preliminary Gazette</div>
+              <div class="step-note">Public Notice & Solatium</div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="statutory-step-box completed">
+              <div class="step-icon-badge" title="Fair Hearing">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 7l9-4 9 4M6 13l-3-6h6l-3 6a3 3 0 0 1-6 0zM18 13l-3-6h6l-3 6a3 3 0 0 1-6 0z"/></svg>
+              </div>
+              <div class="step-sec">STAGE 3: SEC 15</div>
+              <div class="step-name">Hearing of Objections</div>
+              <div class="step-note">60-Day Citizen Redressal</div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="statutory-step-box in-progress">
+              <div class="step-icon-badge" title="Declaration of Acquisition">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div class="step-sec">STAGE 4: SEC 19</div>
+              <div class="step-name">Declaration of Acquisition</div>
+              <div class="step-note">Cadastral Alignment Lock</div>
+            </div>
+
+            <!-- Stage 5 -->
+            <div class="statutory-step-box upcoming">
+              <div class="step-icon-badge" title="Award & Solatium">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+              </div>
+              <div class="step-sec">STAGE 5: SEC 23</div>
+              <div class="step-name">Award & Solatium (DBT)</div>
+              <div class="step-note">100% Solatium Disbursed</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 2: Proposal Submission Workflow (Prompt 3)
+           ==================================================================== -->
+      <section id="view-proposals" class="view-panel">
+        <!-- Horizontal Stepper (Prompt 3) -->
+        <div class="stepper-container">
+          <div class="stepper-nav" role="tablist">
+            <div class="stepper-line" aria-hidden="true"></div>
+
+            <button type="button" class="step-item active" id="step-nav-1" role="tab" aria-selected="true">
+              <div class="step-number">1</div>
+              <div class="step-info">
+                <div class="step-title" data-en="Project Details" data-hi="परियोजना विवरण">Project Details</div>
+                <div class="step-subtext" data-en="Form-A Details" data-hi="प्रपत्र-ए विवरण">Form-A Details</div>
+              </div>
+            </button>
+
+            <button type="button" class="step-item" id="step-nav-2" role="tab" aria-selected="false">
+              <div class="step-number">2</div>
+              <div class="step-info">
+                <div class="step-title" data-en="Land Requirement" data-hi="भूमि आवश्यकता">Land Requirement</div>
+                <div class="step-subtext" data-en="Cadastral Extent" data-hi="भू-राजस्व सीमा">Cadastral Extent</div>
+              </div>
+            </button>
+
+            <button type="button" class="step-item" id="step-nav-3" role="tab" aria-selected="false">
+              <div class="step-number">3</div>
+              <div class="step-info">
+                <div class="step-title" data-en="R&R Estimates" data-hi="पुनर्वास प्राक्कलन">R&R Estimates</div>
+                <div class="step-subtext" data-en="PAFs & Solatium" data-hi="प्रभावित परिवार">PAFs & Solatium</div>
+              </div>
+            </button>
+
+            <button type="button" class="step-item" id="step-nav-4" role="tab" aria-selected="false">
+              <div class="step-number">4</div>
+              <div class="step-info">
+                <div class="step-title" data-en="Document Upload" data-hi="दस्तावेज़ अपलोड">Document Upload</div>
+                <div class="step-subtext" data-en="SIA & Gazette" data-hi="एसआईए एवं राजपत्र">SIA & Gazette</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Master Proposal Form -->
+        <form id="proposal-master-form" onsubmit="return false;">
+
+          <!-- STEP 1: Project Details (Prompt 3 requirement) -->
+          <div id="step-panel-1" class="form-step-panel active">
+            <div class="gov-card">
+              <div class="gov-card-header">
+                <h2 class="card-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  <span data-en="Step 1: Project Details & Public Purpose" data-hi="चरण 1: परियोजना विवरण एवं सार्वजनिक प्रयोजन">Step 1: Project Details & Public Purpose</span>
+                </h2>
+                <span class="metric-badge badge-blue">Mandatory Submission</span>
+              </div>
+              <div class="gov-card-body">
+                <div class="form-grid-2">
+                  <!-- Project Name -->
+                  <div class="form-group full-width">
+                    <label class="form-label" for="prop-project-name">
+                      <span data-en="Project Name" data-hi="परियोजना का नाम">Project Name</span>
+                      <span class="required">*</span>
+                    </label>
+                    <input type="text" id="prop-project-name" class="gov-input" placeholder="e.g. Western Dedicated Freight Corridor - Sector 4 Extension" value="Western Dedicated Freight Corridor (Thane-Palghar Expressway Connector)">
+                    <span class="form-help-text" data-en="Official nomenclature as sanctioned in the Administrative Approval (AA)." data-hi="प्रशासनिक स्वीकृति में उल्लेखित आधिकारिक नाम।">Official nomenclature as sanctioned in the Administrative Approval (AA).</span>
+                  </div>
+
+                  <!-- Sponsoring Ministry Dropdown -->
+                  <div class="form-group">
+                    <label class="form-label" for="prop-sponsoring-ministry">
+                      <span data-en="Sponsoring Ministry" data-hi="प्रायोजक मंत्रालय">Sponsoring Ministry</span>
+                      <span class="required">*</span>
+                    </label>
+                    <select id="prop-sponsoring-ministry" class="gov-select">
+                      <option value="">-- Select Sponsoring Ministry --</option>
+                      <option value="morth" selected>Ministry of Road Transport and Highways (MoRTH)</option>
+                      <option value="railways">Ministry of Railways (Railway Board)</option>
+                      <option value="power">Ministry of Power</option>
+                      <option value="ports">Ministry of Ports, Shipping and Waterways</option>
+                      <option value="coal">Ministry of Coal & Mines</option>
+                      <option value="housing">Ministry of Housing and Urban Affairs</option>
+                    </select>
+                  </div>
+
+                  <!-- State Dropdown -->
+                  <div class="form-group">
+                    <label class="form-label" for="prop-state">
+                      <span data-en="State" data-hi="राज्य">State</span>
+                      <span class="required">*</span>
+                    </label>
+                    <select id="prop-state" class="gov-select">
+                      <option value="">-- Select State --</option>
+                      <option value="MH" selected>Maharashtra</option>
+                      <option value="UP">Uttar Pradesh</option>
+                      <option value="GJ">Gujarat</option>
+                      <option value="OD">Odisha</option>
+                      <option value="MP">Madhya Pradesh</option>
+                      <option value="KA">Karnataka</option>
+                    </select>
+                  </div>
+
+                  <!-- Estimated Budget -->
+                  <div class="form-group">
+                    <label class="form-label" for="prop-budget">
+                      <span data-en="Estimated Budget (Compensation + R&R)" data-hi="अनुमानित बजट">Estimated Budget (Compensation + R&R)</span>
+                      <span class="required">*</span>
+                    </label>
+                    <div class="input-with-affix">
+                      <span class="input-prefix">₹</span>
+                      <input type="number" id="prop-budget" class="gov-input" placeholder="in Crores" value="480.50">
+                      <span class="input-prefix" style="border-left:none; border-right:1px solid var(--border-dark); border-radius:0 3px 3px 0;">Cr</span>
+                    </div>
+                  </div>
+
+                  <!-- District (CALA Jurisdiction) -->
+                  <div class="form-group">
+                    <label class="form-label" for="prop-district">
+                      <span data-en="District (CALA Jurisdiction)" data-hi="ज़िला (सक्षम प्राधिकारी)">District (CALA Jurisdiction)</span>
+                      <span class="required">*</span>
+                    </label>
+                    <select id="prop-district" class="gov-select">
+                      <option value="Thane" selected>Thane District (CALA Office, Thane West)</option>
+                      <option value="Palghar">Palghar District</option>
+                      <option value="Raigad">Raigad District</option>
+                      <option value="Pune">Pune District</option>
+                    </select>
+                  </div>
+
+                  <!-- Project Classification -->
+                  <div class="form-group">
+                    <label class="form-label">
+                      <span data-en="Acquisition Category" data-hi="अधिग्रहण श्रेणी">Acquisition Category</span>
+                    </label>
+                    <div class="radio-group">
+                      <label class="radio-label">
+                        <input type="radio" name="acq-category" value="linear" checked>
+                        <span>Linear Project (Highway/Rail/Canal)</span>
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="acq-category" value="nonlinear">
+                        <span>Non-linear (Industrial Park/Township)</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Urgency Clause -->
+                  <div class="form-group">
+                    <label class="form-label">
+                      <span data-en="Invoke Urgency Clause (Section 40)" data-hi="अत्यावश्यकता खंड (धारा 40)">Invoke Urgency Clause (Section 40)</span>
+                    </label>
+                    <div class="radio-group">
+                      <label class="radio-label">
+                        <input type="radio" name="urgency-clause" value="no" checked>
+                        <span>No (Regular SIA Route)</span>
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="urgency-clause" value="yes">
+                        <span>Yes (National Defence / Emergency)</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Public Purpose Description -->
+                  <div class="form-group full-width">
+                    <label class="form-label" for="prop-public-purpose">
+                      <span data-en="Statement of Public Purpose" data-hi="सार्वजनिक प्रयोजन का विवरण">Statement of Public Purpose</span>
+                    </label>
+                    <textarea id="prop-public-purpose" rows="3" class="gov-textarea" placeholder="Detail how the acquisition qualifies under Section 2(1) of RFCTLARR Act 2013...">The proposed acquisition facilitates the construction of an 8-lane grade-separated bypass corridor connecting Jawaharlal Nehru Port Trust (JNPT) with NH-48 to alleviate heavy container freight congestion and spur economic development across Western Maharashtra.</textarea>
+                  </div>
+                </div>
+
+                <!-- Step 1 Actions Bar -->
+                <div class="form-actions-bar">
+                  <button type="button" class="btn-secondary" id="btn-proposal-cancel">Cancel & Clear</button>
+                  <div style="display:flex; gap:12px;">
+                    <button type="button" class="btn-secondary" id="btn-proposal-draft">Save as Draft</button>
+                    <button type="button" class="btn-primary" id="btn-step1-next">
+                      <span data-en="Next Step: Land Requirement →" data-hi="अगला चरण: भूमि आवश्यकता →">Next Step: Land Requirement →</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Land Requirement -->
+          <div id="step-panel-2" class="form-step-panel">
+            <div class="gov-card">
+              <div class="gov-card-header">
+                <h2 class="card-title">
+                  <span data-en="Step 2: Land Requirement & Cadastral Classification" data-hi="चरण 2: भूमि आवश्यकता एवं भू-राजस्व वर्गीकरण">Step 2: Land Requirement & Cadastral Classification</span>
+                </h2>
+              </div>
+              <div class="gov-card-body">
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Total Agricultural Private Land (Ha)</label>
+                    <input type="number" class="gov-input" value="184.5" placeholder="Hectares">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Total Government / Revenue Land (Ha)</label>
+                    <input type="number" class="gov-input" value="42.8" placeholder="Hectares">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Forest Land Requiring Diversion (Ha)</label>
+                    <input type="number" class="gov-input" value="16.2" placeholder="Hectares (Stage-1 FC needed)">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Total Khasra / Survey Plots Affected</label>
+                    <input type="number" class="gov-input" value="482" placeholder="Total Plots">
+                  </div>
+                </div>
+
+                <div class="form-actions-bar">
+                  <button type="button" class="btn-secondary" id="btn-step2-prev">← Previous</button>
+                  <button type="button" class="btn-primary" id="btn-step2-next">Next Step: R&R Estimates →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: R&R Estimates -->
+          <div id="step-panel-3" class="form-step-panel">
+            <div class="gov-card">
+              <div class="gov-card-header">
+                <h2 class="card-title">
+                  <span data-en="Step 3: Rehabilitation & Resettlement (R&R) Estimates" data-hi="चरण 3: पुनर्वास एवं पुनर्स्थापन प्राक्कलन">Step 3: Rehabilitation & Resettlement (R&R) Estimates</span>
+                </h2>
+              </div>
+              <div class="gov-card-body">
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Total Project Affected Families (PAFs)</label>
+                    <input type="number" class="gov-input" value="640">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">SC / ST Affected Families (Section 41)</label>
+                    <input type="number" class="gov-input" value="112">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Provision for Resettlement Colony</label>
+                    <select class="gov-select">
+                      <option selected>Yes - Construct Model R&R Colony with Basic Amenities</option>
+                      <option>No - Lump sum One-Time Cash Grant in lieu of House</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Solatium Rate Applicable</label>
+                    <input type="text" class="gov-input" value="100% of Market Value (Sec 30)" readonly style="background:#F1F5F9;">
+                  </div>
+                </div>
+
+                <div class="form-actions-bar">
+                  <button type="button" class="btn-secondary" id="btn-step3-prev">← Previous</button>
+                  <button type="button" class="btn-primary" id="btn-step3-next">Next Step: Document Upload →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Document Upload -->
+          <div id="step-panel-4" class="form-step-panel">
+            <div class="gov-card">
+              <div class="gov-card-header">
+                <h2 class="card-title">
+                  <span data-en="Step 4: Statutory Document Uploads" data-hi="चरण 4: सांविधिक दस्तावेज़ अपलोड">Step 4: Statutory Document Uploads</span>
+                </h2>
+              </div>
+              <div class="gov-card-body">
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Detailed Project Report (DPR) [PDF, max 50MB]</label>
+                    <input type="file" class="gov-input">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Geo-referenced Cadastral Alignment Map [SHP / KML]</label>
+                    <input type="file" class="gov-input">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Draft SIA Notification under Section 4(1)</label>
+                    <input type="file" class="gov-input">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Administrative Approval & Expenditure Sanction</label>
+                    <input type="file" class="gov-input">
+                  </div>
+                </div>
+
+                <div class="form-actions-bar">
+                  <button type="button" class="btn-secondary" id="btn-step4-prev">← Previous</button>
+                  <button type="submit" class="btn-saffron" id="btn-step4-submit">
+                    ✓ Final Submit Proposal to State Govt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 3: GIS Spatial Tracking (Prompt 4)
+           ==================================================================== -->
+      <!-- ====================================================================
+           VIEW 3: GIS Spatial Tracking (Prompt 4 - Artisan Cartography)
+           ==================================================================== -->
+      <section id="view-gis" class="view-panel">
+        <div class="page-title-row" style="margin-bottom: 16px;">
+          <div>
+            <h2 style="font-family:var(--font-serif); font-size:22px; font-weight:700; color:var(--brand-indigo);">
+              Cadastral Spatial Tracking & Alignment Overlay
+            </h2>
+            <p style="font-size:13px; color:var(--text-secondary); margin-top:3px;">
+              Georeferenced cadastral layer showing NH-48 Express corridor alignment cutting through Village Navghar and Chinchoti parcels. Click any parcel to inspect compensation records.
+            </p>
+          </div>
+        </div>
+
+        <!-- Large Full-Width GIS Map Container (Artisan Vellum Canvas) -->
+        <div class="gis-viewport-wrapper" role="region" aria-label="GIS Cadastral Map Viewer">
+          <!-- Parchment Topographic Grid Background -->
+          <div class="gis-canvas-bg" aria-hidden="true"></div>
+
+          <!-- SVG Layer with Mock Land Parcels & Alignment -->
+          <svg class="gis-svg-overlay" viewBox="0 0 1000 600" preserveAspectRatio="none">
+            <defs>
+              <filter id="gis-watercolor-wash" x="-5%" y="-5%" width="110%" height="110%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+
+            <!-- Topographic Contours (Artisan Cartography) -->
+            <g opacity="0.18" stroke="#9A8366" stroke-width="1" fill="none">
+              <path d="M 0 120 Q 250 80 500 160 T 1000 100" />
+              <path d="M 0 240 Q 300 200 600 280 T 1000 220" />
+              <path d="M 0 400 Q 350 360 700 420 T 1000 360" />
+              <path d="M 0 520 Q 400 480 750 540 T 1000 480" />
+            </g>
+
+            <!-- Village Boundary Layer (Dotted Forest Green Ink) -->
+            <g id="gis-village-layer">
+              <path class="village-boundary-path" d="M 40 40 L 460 40 L 480 340 L 30 360 Z" />
+              <text x="60" y="70" font-family="Lora, Georgia, serif" font-size="12" font-weight="700" fill="#244633" letter-spacing="0.5">VILLAGE: NAVGHAR (TALUKA: VASAI)</text>
+              
+              <path class="village-boundary-path" d="M 480 40 L 960 40 L 960 450 L 500 480 Z" />
+              <text x="520" y="70" font-family="Lora, Georgia, serif" font-size="12" font-weight="700" fill="#244633" letter-spacing="0.5">VILLAGE: CHINCHOTI (TALUKA: VASAI)</text>
+            </g>
+
+            <!-- Highway Alignment Corridor Buffer and Centerline (Terracotta Ink) -->
+            <g id="gis-highway-layer">
+              <path class="highway-alignment-buffer" d="M 20 280 C 250 260, 450 180, 980 140" />
+              <path class="highway-alignment-path" d="M 20 280 C 250 260, 450 180, 980 140" />
+              <text x="730" y="125" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" fill="#A34930" letter-spacing="1">PROPOSED NH-48 ALIGNMENT (ROW: 60M)</text>
+            </g>
+
+            <!-- Mock Land Parcel Polygons (Watercolor Styled) -->
+            <!-- Parcel 409A (Acquired / Compensation Paid) -->
+            <polygon class="parcel-polygon acquired" data-parcel-id="409A"
+                     points="240,160 380,150 410,250 260,270" filter="url(#gis-watercolor-wash)" />
+            <text class="parcel-text" x="300" y="210">Parcel 409A</text>
+            <text class="parcel-text" x="302" y="225" font-size="9.5" fill="#244633">2.4 Ha (Paid)</text>
+
+            <!-- Parcel 409B (Pending) -->
+            <polygon class="parcel-polygon pending" data-parcel-id="409B"
+                     points="380,150 510,130 530,220 410,250" filter="url(#gis-watercolor-wash)" />
+            <text class="parcel-text" x="430" y="190">Parcel 409B</text>
+            <text class="parcel-text" x="432" y="205" font-size="9.5" fill="#A34930">1.8 Ha (Sec 19)</text>
+
+            <!-- Parcel 410 (Disputed / Court Stay) -->
+            <polygon class="parcel-polygon disputed" data-parcel-id="410"
+                     points="510,130 650,110 680,210 530,220" filter="url(#gis-watercolor-wash)" />
+            <text class="parcel-text" x="570" y="165">Parcel 410</text>
+            <text class="parcel-text" x="562" y="180" font-size="9.5" fill="#B83A3A">3.1 Ha (Disputed)</text>
+
+            <!-- Parcel 411 (Acquired / Disbursed) -->
+            <polygon class="parcel-polygon acquired" data-parcel-id="411"
+                     points="650,110 820,90 850,200 680,210" filter="url(#gis-watercolor-wash)" />
+            <text class="parcel-text" x="720" y="150">Parcel 411</text>
+            <text class="parcel-text" x="722" y="165" font-size="9.5" fill="#244633">4.5 Ha (Paid)</text>
+
+            <!-- Adjacent Southern Parcel 412 -->
+            <polygon class="parcel-polygon acquired" data-parcel-id="412"
+                     points="260,270 410,250 430,370 280,390" filter="url(#gis-watercolor-wash)" />
+            <text class="parcel-text" x="320" y="320">Parcel 412</text>
+            <text class="parcel-text" x="318" y="335" font-size="9.5" fill="#244633">2.9 Ha (Govt)</text>
+
+            <!-- Adjacent Southern Parcel 413 -->
+            <polygon class="parcel-polygon pending" data-parcel-id="409B"
+                     points="410,250 530,220 560,350 430,370" filter="url(#gis-watercolor-wash)" />
+            <text class="parcel-text" x="460" y="295">Parcel 413</text>
+
+            <!-- Antique Artisan Compass Rose Indicator -->
+            <g transform="translate(60, 500)">
+              <circle cx="24" cy="24" r="22" fill="#FAF7F2" stroke="#B6A692" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(45,35,25,0.15))"/>
+              <circle cx="24" cy="24" r="18" fill="none" stroke="#244633" stroke-width="0.8" stroke-dasharray="2 2"/>
+              <!-- Compass Points -->
+              <polygon points="24,6 28,24 24,21 20,24" fill="#C45F43"/>
+              <polygon points="24,42 28,24 24,27 20,24" fill="#1C2B39"/>
+              <polygon points="6,24 24,20 21,24 24,28" fill="#5E8368"/>
+              <polygon points="42,24 24,20 27,24 24,28" fill="#5E8368"/>
+              <circle cx="24" cy="24" r="2.5" fill="#C29D55"/>
+              <text x="21" y="4" font-family="Lora, serif" font-size="10" font-weight="800" fill="#A34930">N</text>
+            </g>
+          </svg>
+
+          <!-- Floating Control Panel on Top Right (Artisan Card) -->
+          <div class="gis-control-panel">
+            <div class="gis-panel-title">
+              <span>Cartographic Layers</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="gis-layer-toggles">
+              <!-- Toggle 1: Show Acquired Land -->
+              <div class="layer-toggle-row">
+                <span>
+                  <span class="layer-legend-swatch swatch-acquired"></span>
+                  Acquired Land (Possessed)
+                </span>
+                <label class="switch">
+                  <input type="checkbox" id="toggle-acquired" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- Toggle 2: Show Affected Villages -->
+              <div class="layer-toggle-row">
+                <span>
+                  <span class="layer-legend-swatch swatch-village"></span>
+                  Affected Village Cadastre
+                </span>
+                <label class="switch">
+                  <input type="checkbox" id="toggle-villages" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- Toggle 3: Show Highway Alignment -->
+              <div class="layer-toggle-row">
+                <span>
+                  <span class="layer-legend-swatch swatch-highway"></span>
+                  Highway Alignment Buffer
+                </span>
+                <label class="switch">
+                  <input type="checkbox" id="toggle-highway" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- Toggle 4: Show Cadastral Labels -->
+              <div class="layer-toggle-row">
+                <span>
+                  <span style="font-weight:700; color:var(--brand-indigo); margin-right:4px;">#</span>
+                  Survey Plot Numbers
+                </span>
+                <label class="switch">
+                  <input type="checkbox" id="toggle-labels" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Mock Popup Card over Parcel -->
+          <div id="gis-parcel-popup" class="gis-popup-card">
+            <div class="popup-header">
+              <span id="pop-parcel-id" class="popup-parcel-id">Parcel ID: 409A</span>
+              <button id="popup-close-btn" class="popup-close-btn" title="Close" aria-label="Close popup">×</button>
+            </div>
+            <div class="popup-body">
+              <div class="popup-row">
+                <span class="popup-label">Statutory Status:</span>
+                <span id="pop-status" class="popup-status-badge">Compensation Paid</span>
+              </div>
+              <div class="popup-row">
+                <span class="popup-label">Survey Area:</span>
+                <span id="pop-area" class="popup-val">2.4 Hectares</span>
+              </div>
+              <div class="popup-row">
+                <span class="popup-label">Khasra / Plot No:</span>
+                <span id="pop-khasra" class="popup-val">142/3</span>
+              </div>
+              <div class="popup-row">
+                <span class="popup-label">Village & Taluka:</span>
+                <span id="pop-village" class="popup-val">Navghar (Taluka: Vasai)</span>
+              </div>
+              <div class="popup-row">
+                <span class="popup-label">Owner of Record:</span>
+                <span id="pop-owner" class="popup-val">Smt. Shakuntala Patil & 2 Others</span>
+              </div>
+              <div class="popup-row">
+                <span class="popup-label">Solatium Disbursed:</span>
+                <span id="pop-amount" class="popup-val" style="color:#244633;">₹ 1,48,20,000 (PFMS Direct)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Coordinates Badge -->
+          <div class="gis-coords-badge">
+            <span>Lat: 19°22'44.2"N</span>
+            <span>Long: 72°49'32.8"E</span>
+            <span>Cadastral EPSG:4326 (WGS84)</span>
+          </div>
+
+          <!-- Scale Bar -->
+          <div class="gis-scale-bar">
+            <span>500 m</span>
+            <div class="scale-line"></div>
+            <span>1:50,000</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 4: Land Records (RoR & Khasra Registry - Ancestral Ledger)
+           ==================================================================== -->
+      <section id="view-records" class="view-panel">
+        <div class="table-filter-bar">
+          <div style="display:flex; gap:14px; align-items:center;">
+            <input type="text" class="gov-input" placeholder="Search by Khasra No / Landowner Name..." style="width:280px;">
+            <select class="gov-select" style="width:170px;">
+              <option>All Villages</option>
+              <option selected>Navghar</option>
+              <option>Chinchoti</option>
+            </select>
+          </div>
+          <div>
+            <button class="btn-primary" style="font-size:12.5px; padding:7px 16px;">
+              📥 Export Gazette RoR (Excel/PDF)
+            </button>
+          </div>
+        </div>
+        <table class="gov-table" aria-label="Digital Land Records Table">
+          <thead>
+            <tr>
+              <th>Parcel ID</th>
+              <th>Khasra / Plot No</th>
+              <th>Village & Taluka</th>
+              <th>Landowner (RoR)</th>
+              <th>Total Area</th>
+              <th>Statutory Status</th>
+              <th>Solatium Value (₹)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>409A</strong></td>
+              <td>142/3</td>
+              <td>Navghar, Vasai</td>
+              <td>Smt. Shakuntala Patil & 2 Others</td>
+              <td>2.40 Ha</td>
+              <td><span class="metric-badge badge-green">Compensation Paid</span></td>
+              <td style="font-weight:700; color:var(--brand-forest);">₹ 1,48,20,000</td>
+              <td><a href="#gis" class="btn-secondary" style="padding:4px 10px; font-size:11px;">View GIS</a></td>
+            </tr>
+            <tr>
+              <td><strong>409B</strong></td>
+              <td>142/4</td>
+              <td>Navghar, Vasai</td>
+              <td>Shri Ramchandra G. Mhatre</td>
+              <td>1.80 Ha</td>
+              <td><span class="metric-badge badge-saffron">Sec 19 Notice</span></td>
+              <td style="font-weight:700; color:var(--accent-terracotta);">₹ 1,12,50,000</td>
+              <td><a href="#gis" class="btn-secondary" style="padding:4px 10px; font-size:11px;">View GIS</a></td>
+            </tr>
+            <tr>
+              <td><strong>410</strong></td>
+              <td>143/1</td>
+              <td>Chinchoti, Vasai</td>
+              <td>Tribal Co-operative Society</td>
+              <td>3.10 Ha</td>
+              <td><span class="metric-badge badge-rejected">Court Stay (Sec 15)</span></td>
+              <td style="font-weight:700; color:var(--status-stay);">₹ 1,94,40,000</td>
+              <td><a href="#gis" class="btn-secondary" style="padding:4px 10px; font-size:11px;">View GIS</a></td>
+            </tr>
+            <tr>
+              <td><strong>411</strong></td>
+              <td>144/2</td>
+              <td>Chinchoti, Vasai</td>
+              <td>Shri Ganesh Narayan Raut</td>
+              <td>4.50 Ha</td>
+              <td><span class="metric-badge badge-green">Possession Taken</span></td>
+              <td style="font-weight:700; color:var(--brand-forest);">₹ 2,85,60,000</td>
+              <td><a href="#gis" class="btn-secondary" style="padding:4px 10px; font-size:11px;">View GIS</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 5: R&R Tracking (Empathetic Storytelling & Family Welfare)
+           ==================================================================== -->
+      <section id="view-rr" class="view-panel">
+        <div class="gov-card">
+          <div class="gov-card-header">
+            <h2 class="card-title">Second Schedule R&R Compliance & Empathetic Welfare</h2>
+            <span class="metric-badge badge-green">41,290 PAFs Rehabilitated Nationally</span>
+          </div>
+          <div class="gov-card-body">
+            <p style="font-size:13.5px; margin-bottom:20px; color:var(--text-secondary); line-height:1.6;">
+              Under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013 (RFCTLARR Act), every project-affected family is entitled to complete rehabilitation packages including pucca homes, guaranteed subsistence grants, and vocational livelihood training.
+            </p>
+            <div class="metrics-grid" style="margin-bottom:24px;">
+              <div class="metric-card">
+                <div class="metric-title">Housing Units Handed Over</div>
+                <div class="metric-value">28,450 Units</div>
+                <div class="metric-footer"><span class="metric-badge badge-green">PMAY-G Convergence</span></div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-title">One-Time Resettlement Allowance</div>
+                <div class="metric-value">₹ 50,000 / PAF</div>
+                <div class="metric-footer"><span class="metric-badge badge-blue">100% PFMS Disbursed</span></div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-title">Subsistence Grant (1 Year)</div>
+                <div class="metric-value">₹ 36,000 / PAF</div>
+                <div class="metric-footer"><span class="metric-badge badge-saffron">Monthly Direct Transfer</span></div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-title">Cattle Shed & Transport Grant</div>
+                <div class="metric-value">₹ 75,000 / PAF</div>
+                <div class="metric-footer"><span class="metric-badge badge-green">Rural Agrarian Families</span></div>
+              </div>
+            </div>
+
+            <!-- Human-Centric Story Cards: Real Lives Restored -->
+            <div style="border-top:1px dashed var(--border-deckle); padding-top:20px;">
+              <h3 style="font-family:var(--font-serif); font-size:16px; color:var(--brand-indigo); margin-bottom:14px; display:flex; align-items:center; gap:8px;">
+                <span>🌱</span>
+                <span>Restorative Rehabilitation Testimonials (Citizen Stories)</span>
+              </h3>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+                <!-- Story Card 1 -->
+                <div style="background:var(--canvas-ivory); border:1px solid var(--border-deckle); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-paper-xs);">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span style="font-family:var(--font-serif); font-weight:700; color:var(--brand-forest); font-size:14px;">Smt. Shakuntala Patil (Navghar)</span>
+                    <span class="metric-badge badge-green">Model Colony Allottee</span>
+                  </div>
+                  <p style="font-size:12px; color:var(--text-secondary); line-height:1.55;">
+                    "With prompt Section 23 direct transfer, our family constructed an earthquake-resilient home in the Model Resettlement Colony. The ₹75,000 cattle-shed allowance enabled us to establish an automated dairy unit, tripling our household income."
+                  </p>
+                  <div style="margin-top:8px; font-size:11px; color:var(--text-muted);">
+                    Allotment: Plot #18-B, Navghar Model Colony • Solar Energized
+                  </div>
+                </div>
+
+                <!-- Story Card 2 -->
+                <div style="background:var(--canvas-ivory); border:1px solid var(--border-deckle); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-paper-xs);">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span style="font-family:var(--font-serif); font-weight:700; color:var(--accent-terracotta-dark); font-size:14px;">Tribal Co-operative Society (Chinchoti)</span>
+                    <span class="metric-badge badge-saffron">Section 41 Safeguards</span>
+                  </div>
+                  <p style="font-size:12px; color:var(--text-secondary); line-height:1.55;">
+                    "Community rights under Section 41 protected in full. 112 tribal families received alternative community forest entitlements and joint land titles with women as primary co-owners, accompanied by medicinal herb cultivation grants."
+                  </p>
+                  <div style="margin-top:8px; font-size:11px; color:var(--text-muted);">
+                    Joint Titles Issued: 112 PAFs • Forest Diversion Stage-1 Approved
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 6: Reports & Gazette
+           ==================================================================== -->
+      <section id="view-reports" class="view-panel">
+        <div class="gov-card">
+          <div class="gov-card-header">
+            <h2 class="card-title">Statutory Reports & Gazette Notifications</h2>
+          </div>
+          <div class="gov-card-body">
+            <ul class="activity-feed">
+              <li class="activity-item">
+                <span class="activity-bullet bullet-green"></span>
+                <div style="flex:1;">
+                  <div class="activity-title">E-Gazette Extraordinary Notification No. 492/2026</div>
+                  <div class="activity-desc">Declaration of Final Award under Section 23 for Western Dedicated Freight Corridor Project.</div>
+                  <div class="activity-meta"><span>Published by Authority • 26 Sep 2026</span></div>
+                </div>
+                <button class="btn-secondary" style="font-size:11.5px;">PDF (1.8 MB)</button>
+              </li>
+              <li class="activity-item">
+                <span class="activity-bullet bullet-saffron"></span>
+                <div style="flex:1;">
+                  <div class="activity-title">Social Impact Assessment (SIA) Final Evaluation Report</div>
+                  <div class="activity-desc">Independent Expert Group recommendations for NH-48 Expressway widening.</div>
+                  <div class="activity-meta"><span>Tata Institute of Social Sciences (TISS) • 18 Sep 2026</span></div>
+                </div>
+                <button class="btn-secondary" style="font-size:11.5px;">PDF (3.2 MB)</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal: Official Government SSO / IRCEP Login Modal -->
+  <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="login-modal-box">
+      <div class="login-modal-header">
+        <div class="login-modal-title" id="modal-title">
+          <img src="images/emblem.png" alt="Emblem" style="height:28px; width:auto; filter:drop-shadow(0 1px 2px rgba(0,0,0,0.3));">
+          <span>Official Portal Authentication (Parichay SSO)</span>
+        </div>
+        <button id="modal-close-btn" class="popup-close-btn" aria-label="Close dialog">×</button>
+      </div>
+
+      <div class="login-modal-body">
+        <div style="font-size:11.5px; color:#475569; background:#F8FAFC; border:1px solid #CBD5E1; padding:8px 10px; border-radius:3px; margin-bottom:16px;">
+          <strong>Security Notice:</strong> Authorized access for Ministry Officials, State Revenue Commissioners, and CALA Competent Authorities under IT Act 2000.
+        </div>
+
+        <form id="gov-auth-form">
+          <div class="form-group">
+            <label class="form-label" for="login-id">User ID / Service Email</label>
+            <input type="text" id="login-id" class="gov-input" placeholder="e.g. sk.sharma@gov.in" value="sk.sharma@gov.in" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="login-pass">Official Password</label>
+            <input type="password" id="login-pass" class="gov-input" value="••••••••••••" required>
+          </div>
+
+          <!-- Captcha Verification (Referencing ircep.gov.in / RABH) -->
+          <div class="form-group">
+            <label class="form-label" for="captcha-input">Security Verification Code (Captcha)</label>
+            <div class="captcha-box">
+              <span id="captcha-text" class="captcha-image-canvas">7X9K2</span>
+              <button type="button" id="btn-refresh-captcha" class="btn-secondary" style="padding:6px 10px;" title="Refresh Captcha">🔄</button>
+              <button type="button" id="btn-audio-captcha" class="btn-secondary" style="padding:6px 10px;" title="Audio Captcha">🔊</button>
+            </div>
+            <input type="text" id="captcha-input" class="gov-input" placeholder="Enter Captcha code shown above" style="margin-top:6px;" required>
+          </div>
+
+          <div style="margin-top:20px; display:flex; gap:10px;">
+            <button type="submit" class="btn-primary" style="flex:1; justify-content:center;">
+              Secure Parichay Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official Government Footer (Prompt & Reference Compliant) -->
+  <footer class="official-gov-footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <div class="footer-col-title">About the Portal</div>
+        <p style="font-size:12px; line-height:1.6; color:#94A3B8;">
+          The National Land Acquisition & Management System (NLAMS) is an end-to-end digital governance platform implemented by the Department of Land Resources (DoLR), Ministry of Rural Development, Government of India, ensuring transparent implementation of RFCTLARR Act 2013 and PM Gati Shakti National Master Plan.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Acts & Rules</div>
+        <ul class="footer-links">
+          <li><a href="#reports">RFCTLARR Act 2013</a></li>
+          <li><a href="#reports">National SIA Guidelines</a></li>
+          <li><a href="#reports">Direct Benefit Transfer (DBT) Mandate</a></li>
+          <li><a href="#reports">Compulsory Solatium Rules</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Portals & Links</div>
+        <ul class="footer-links">
+          <li><a href="#">Ministry of Rural Development (MoRD)</a></li>
+          <li><a href="#">PM Gati Shakti Portal</a></li>
+          <li><a href="#">Parichay National SSO</a></li>
+          <li><a href="#">CPGRAMS Grievance Redressal</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">GIGW Compliance</div>
+        <ul class="footer-links">
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">Website Policies</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Security Audit Certificate (STQC)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 Department of Land Resources, Ministry of Rural Development, Government of India. All Rights Reserved.
+      </div>
+      <div class="footer-nic-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        <span>Designed, Developed and Hosted by <strong>National Informatics Centre (NIC)</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
